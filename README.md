@@ -6,9 +6,9 @@ about Maven.
 Sometimes, in college, we are simply told setup our
 ```pom.xml``` file and run:
 
-<code>
+```
 mvn clean install
-</code>
+```
 
 or something similar. My intention is to learn more deeply
 about Maven. Have fun :P
