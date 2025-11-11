@@ -41,7 +41,21 @@ lifecycles
 - Enterprise Application vs simple JAR app.
 
 A pom.xml like the one in ```maven-quick-start-course/minimal/pom.xml```
-is <u>all</u> you need to build a Maven project.
+is <u>all</u> you need to build a Maven project:
+
+```xml
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        http://maven.apache.org/maven-v4:0:0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>clinic.programming</groupId>
+    <artifactId>maven-quick-start</artifactId>
+    <version>1.0</version>
+</project>
+```
 
 Try running ```mvn compile``` from the root of the project.
 
