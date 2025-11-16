@@ -66,3 +66,40 @@ Almost never used. Import or replace dependencies from other
 projects.
 
 ## Most common scopes: compile and test
+
+# Adding Dependencies
+
+If you add a third-party library:
+```java
+import org.apache.commons.lang3.StringUtils;
+```
+Then it becomes a dependency to the project. If you try to
+compile the project,
+```bash
+mvn clean compile
+```
+it will throw the following error:
+```log
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.5.1:compile (default-compile) on project maven-quick-start: Compilation failure: Compilation failure: 
+[ERROR] /Users/rafael1642/GIT/Projects/mvn-quick-start/src/main/java/clinic/programming/training/Application.java:[5,32] package org.apache.commons.lang3 does not exist
+[ERROR] /Users/rafael1642/GIT/Projects/mvn-quick-start/src/main/java/clinic/programming/training/Application.java:[10,34] cannot find symbol
+```
+
+### Add the dependency from the MVN REPOSITORY: CENTRAL
+
+org.apache.commons-lang3
+
+Add these tags between gav (groupId, artifactId, version)
+and the build tag:  
+```xml
+<depencencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>3.19.0</version>
+    </dependency>
+</dependencies>
+```
+
+<u>Mnemonic</u>: GAV -> DEPENDENCIES -> BUILD (PLUGINS)
