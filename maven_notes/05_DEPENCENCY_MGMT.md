@@ -67,7 +67,7 @@ projects.
 
 ## Most common scopes: compile and test
 
-# Adding Dependencies
+# Adding Dependencies from Maven Central
 
 If you add a third-party library:
 ```java
@@ -103,3 +103,10 @@ and the build tag:
 ```
 
 <u>Mnemonic</u>: GAV -> DEPENDENCIES -> BUILD (PLUGINS)
+
+# List All of your Maven Dependencies
+
+```bash
+mvn dependency:tree
+mvn dependency:tree > dependency_list.txt
+```
