@@ -38,3 +38,11 @@ Once you've modified the pom.xml file, run the "test" goal:
 mvn test
 # compile > test > package > install > deploy
 ```
+
+# Unit Testing Reports (Surefire Plugin)
+
+```bash
+cd target/surefire-reports/
+ls
+TEST-clinic.programming.training.ApplicationTest.[xml|txt]
+```
