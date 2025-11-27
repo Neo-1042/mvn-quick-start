@@ -26,3 +26,9 @@ target/
 hs_err_pid*
 replay_pid*
 .DS_Store
+
+# Eclipse-related hidden files and folders
+.settings 
+# This file is automatically updated whenever you change dependencies
+.classpath
+# .project is the one file that Eclipse needs to detect that it is a Eclipse-based project
